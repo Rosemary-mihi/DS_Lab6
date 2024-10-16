@@ -85,7 +85,7 @@ set the "paint" for the paintbrush
 	public void paintFill(int x, int y, Paint[][] mesh, Paint c, Paint pc)
 	{
 		mesh[x][y] = pc;
-		if (y+1 < 400/8 && c.equals(mesh[x][y+1]))
+		if (y+1 < mesh.length && c.equals(mesh[x][y+1]))
 		{
 			paintFill(x, y+1, mesh, c, pc);
 		}
@@ -97,7 +97,7 @@ set the "paint" for the paintbrush
 		{
 			paintFill(x-1, y, mesh, c, pc);
 		}
-		if (x+1 < 400/8 && c.equals(mesh[x+1][y]))
+		if (x+1 < mesh.length && c.equals(mesh[x+1][y]))
 		{
 			paintFill(x+1, y, mesh, c, pc);
 		}
@@ -112,7 +112,7 @@ set the "paint" for the paintbrush
 		{
 			mesh[x][y] = White;
 		}
-		if (y+1 < 400/8 && c.equals(mesh[x][y+1]))
+		if (y+1 < mesh.length && c.equals(mesh[x][y+1]))
 		{
 			paintPattern1(x, y+1, mesh, c);
 		}
@@ -124,7 +124,7 @@ set the "paint" for the paintbrush
 		{
 			paintPattern1(x-1, y, mesh, c);
 		}
-		if (x+1 < 400/8 && c.equals(mesh[x+1][y]))
+		if (x+1 < mesh.length && c.equals(mesh[x+1][y]))
 		{
 			paintPattern1(x+1, y, mesh, c);
 		}
