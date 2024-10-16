@@ -106,13 +106,11 @@ set the "paint" for the paintbrush
 	{
 		if (x%2 == 0)
 		{
-			PaintColor p = new PaintColor(Color.YELLOW);
-			mesh[x][y] = p;
+			mesh[x][y] = Gold;
 		}
 		else 
 		{
-			PaintColor p = new PaintColor(Color.WHITE);
-			mesh[x][y] = p;
+			mesh[x][y] = White;
 		}
 		if (y+1 < 400/8 && c.equals(mesh[x][y+1]))
 		{
